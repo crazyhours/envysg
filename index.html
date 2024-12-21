@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Crystal Bracelet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        select, input[type="range"], button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .budget-display {
+            font-weight: bold;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customize Your Crystal Bracelet</h1>
+        <form id="customization-form">
+            <div class="form-group">
+                <label for="crystal-type">Choose Crystal Type:</label>
+                <select id="crystal-type" name="crystalType">
+                    <option value="amethyst">Amethyst</option>
+                    <option value="rose-quartz">Rose Quartz</option>
+                    <option value="citrine">Citrine</option>
+                    <option value="jade">Jade</option>
+                    <option value="lapis-lazuli">Lapis Lazuli</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hardware-color">Select Hardware Color:</label>
+                <select id="hardware-color" name="hardwareColor">
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="rose-gold">Rose Gold</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Set Your Budget:</label>
+                <input type="range" id="budget" name="budget" min="20" max="500" step="10" value="100">
+                <div class="budget-display">Budget: $100</div>
+            </div>
+
+            <button type="submit">Submit Customization</button>
+        </form>
+    </div>
+
+    <script>
+        const budgetSlider = document.getElementById('budget');
+        const budgetDisplay = document.querySelector('.budget-display');
+
+        budgetSlider.addEventListener('input', function() {
+            budgetDisplay.textContent = `Budget: $${this.value}`;
+        });
+
+        const form = document.getElementById('customization-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const crystalType = document.getElementById('crystal-type').value;
+            const hardwareColor = document.getElementById('hardware-color').value;
+            const budget = document.getElementById('budget').value;
+
+            alert(`Customization submitted!\n\nCrystal Type: ${crystalType}\nHardware Color: ${hardwareColor}\nBudget: $${budget}`);
+        });
+    </script>
+</body>
+</html>
