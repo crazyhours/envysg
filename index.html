@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customize Your Crystal Bracelet</title>
+    <title>Envy - Handmade Crystal Bracelets</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,16 +12,75 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        .container {
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #111;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x500');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .collections, .customize-section {
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
-        h1 {
+        .collections h2, .customize-section h2 {
             text-align: center;
             margin-bottom: 20px;
         }
-        form {
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .collection-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .collection-item img {
+            width: 100%;
+            height: auto;
+        }
+        .collection-item h3 {
+            margin: 15px 0;
+        }
+        .customize-section form {
             background: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -57,11 +116,53 @@
             margin-top: -10px;
             margin-bottom: 10px;
         }
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Customize Your Crystal Bracelet</h1>
+    <header>
+        <h1>Envy - Handmade Crystal Bracelets</h1>
+    </header>
+    <nav>
+        <a href="#collections">Collections</a>
+        <a href="#customize">Customize</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Discover Luxury, Tailored for You</h2>
+        <p>Explore our handcrafted crystal bracelets or create your own unique piece.</p>
+    </div>
+
+    <section id="collections" class="collections">
+        <h2>Our Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300" alt="Amethyst Bracelet">
+                <h3>Amethyst Bracelet</h3>
+                <p>Elegant and timeless.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300" alt="Rose Quartz Bracelet">
+                <h3>Rose Quartz Bracelet</h3>
+                <p>Perfect for every occasion.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300" alt="Citrine Bracelet">
+                <h3>Citrine Bracelet</h3>
+                <p>Brighten your day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="customize" class="customize-section">
+        <h2>Customize Your Bracelet</h2>
         <form id="customization-form">
             <div class="form-group">
                 <label for="crystal-type">Choose Crystal Type:</label>
@@ -92,7 +193,11 @@
 
             <button type="submit">Submit Customization</button>
         </form>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Envy. All rights reserved.</p>
+    </footer>
 
     <script>
         const budgetSlider = document.getElementById('budget');
