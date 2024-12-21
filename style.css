@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envy - Handmade Crystal Bracelets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Envy - Handmade Crystal Bracelets</h1>
+    </header>
+    <nav>
+        <a href="#collections">Collections</a>
+        <a href="#customize">Customize</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Your Dream in Jewelry Form</h2>
+        <p>Timeless, Elegant, and Truly Yours.</p>
+    </div>
+
+    <section id="collections" class="collections">
+        <h2>Our Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300/8e44ad/ffffff?text=Amethyst" alt="Amethyst Bracelet">
+                <h3>Amethyst Bracelet</h3>
+                <p>Elegant and timeless.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300/3498db/ffffff?text=Rose+Quartz" alt="Rose Quartz Bracelet">
+                <h3>Rose Quartz Bracelet</h3>
+                <p>Perfect for every occasion.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300/f39c12/ffffff?text=Citrine" alt="Citrine Bracelet">
+                <h3>Citrine Bracelet</h3>
+                <p>Brighten your day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="customize" class="customize-section">
+        <h2>Customize Your Bracelet</h2>
+        <form id="customization-form">
+            <div class="form-group">
+                <label for="crystal-type">Choose Crystal Type:</label>
+                <select id="crystal-type" name="crystalType">
+                    <option value="amethyst">Amethyst</option>
+                    <option value="rose-quartz">Rose Quartz</option>
+                    <option value="citrine">Citrine</option>
+                    <option value="jade">Jade</option>
+                    <option value="lapis-lazuli">Lapis Lazuli</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hardware-color">Select Hardware Color:</label>
+                <select id="hardware-color" name="hardwareColor">
+                    <option
